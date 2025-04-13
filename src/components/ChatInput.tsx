@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { PaperPlaneIcon } from "lucide-react";
+import { Send } from "lucide-react";
 
 interface ChatInputProps {
   onSendMessage: (message: string) => void;
@@ -48,7 +48,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, disabled }) => {
         className="bg-flutter-blue hover:bg-flutter-darkBlue h-10 w-10 rounded-full flex-shrink-0"
         disabled={disabled || !inputValue.trim()}
       >
-        <PaperPlaneIcon className="h-5 w-5" />
+        <Send className="h-5 w-5" />
       </Button>
     </form>
   );
